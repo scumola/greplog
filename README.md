@@ -49,6 +49,8 @@ SZ: 6
 
 then things like this are possible
 ==================================
+(find the top-10 most common useragents)
+
 ```
 [root@ip-10-251-9-164 ~]# greplog < /var/log/apache2/access.log | grep "UA:" | sort | uniq -c | sort -rn | head -n 10
   15986 UA: " "
@@ -66,4 +68,4 @@ then things like this are possible
 
 build
 =====
-to build: gcc greplog.c -o greplog -lpcre
+gcc greplog.c -o greplog -lpcre
